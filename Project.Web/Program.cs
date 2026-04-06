@@ -41,12 +41,16 @@ namespace E_commerce.Web
             }
 
             app.UseMiddleware<GlobalErrorHandlerMiddleware>();
-
             app.UseHttpsRedirection();
+            app.UseRouting();
+
+            // CORS MUST be between UseRouting and UseAuth
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
             app.UseAuthorization();
 
+            app.UseStaticFiles();
             app.MapControllers();
 
             app.Run();
