@@ -9,7 +9,7 @@ namespace SoftBridge.Domain.Models.ServiceAggregates;
 public class Service : BaseEntity<Guid>
 {
     public Guid ProviderId { get; set; }
-    public int CategoryId { get; set; }
+    public Guid CategoryId { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public decimal Price { get; set; }

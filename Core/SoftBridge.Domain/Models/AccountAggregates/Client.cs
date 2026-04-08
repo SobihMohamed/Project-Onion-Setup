@@ -8,7 +8,7 @@ namespace SoftBridge.Domain.Models.AccountAggregates;
 
 public class Client : BaseEntity<Guid>
 {
-    public Guid UserId { get; set; }
+    public string UserId { get; set; }
     public string ProfileImageUrl { get; set; } = string.Empty;
 
     // Navigation property

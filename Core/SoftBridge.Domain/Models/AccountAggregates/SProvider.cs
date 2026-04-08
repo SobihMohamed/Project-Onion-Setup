@@ -14,7 +14,7 @@ namespace SoftBridge.Domain.Models.AccountAggregates
     //+ ICollection < Review > Reviews
     public class SProvider: BaseEntity<Guid>
     {
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public string? Bio { get; set; } = string.Empty;
         public string? ProfileImageUrl { get; set; } = string.Empty;
         public string? CvUrl { get; set; } = string.Empty;
@@ -23,7 +23,7 @@ namespace SoftBridge.Domain.Models.AccountAggregates
         public float AverageRating { get; set; } = 0f;
         public int TotalReviews { get; set; }
         public DateTime? ApprovedAt { get; set; }
-        public Guid ApproveByAdminId { get; set; }
+        public string ApproveByAdminId { get; set; }
         public virtual ApplicationUser User { get; set; } = null!;
         public virtual ApplicationUser? ApprovedByAdmin { get; set; }
         public virtual ICollection<Service> Services { get; set; } = new HashSet<Service>();

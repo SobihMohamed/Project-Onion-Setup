@@ -2,8 +2,8 @@
 using E_commerce.Domain.Contracts.GenericReposPattern;
 using E_commerce.Domain.Contracts.SpecificationPattern;
 using E_commerce.Persistence.Evaluator;
-using E_commerce.Persistence.Project_DbContext;
 using Microsoft.EntityFrameworkCore;
+using SoftBridge.Persistence;
 
 namespace E_commerce.Persistence.ImplementsContracts.RepoImplementatoin
 {

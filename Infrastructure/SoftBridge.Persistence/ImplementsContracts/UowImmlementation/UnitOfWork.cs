@@ -1,7 +1,7 @@
 ﻿using E_commerce.Domain.Contracts.GenericReposPattern;
 using E_commerce.Domain.Contracts.UnitOfWorkPattern;
 using E_commerce.Persistence.ImplementsContracts.RepoImplementatoin;
-using E_commerce.Persistence.Project_DbContext;
+using SoftBridge.Persistence;
 
 namespace E_commerce.Persistence.ImplementsContracts.UowImmlementation
 {

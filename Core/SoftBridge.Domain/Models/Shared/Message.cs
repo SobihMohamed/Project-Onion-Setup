@@ -12,8 +12,8 @@ namespace SoftBridge.Domain.Models.Shared
     //+ServiceRequest? Request
     public class Message: BaseEntity<Guid>
     {
-        public Guid SenderId { get; set; }
-        public Guid ReceiverId { get; set; }
+        public string SenderId { get; set; }
+        public string ReceiverId { get; set; }
         public Guid? RequestId { get; set; }
         public string Content { get; set; } = string.Empty;
         public bool IsRead { get; set; } = false;

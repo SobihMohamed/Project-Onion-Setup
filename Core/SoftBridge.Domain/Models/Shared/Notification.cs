@@ -6,7 +6,7 @@ namespace SoftBridge.Domain.Models.Shared;
 
 public class Notification : BaseEntity<Guid>
 {
-    public Guid UserId { get; set; }
+    public string UserId { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Message { get; set; } = string.Empty;
     public bool IsRead { get; set; } = false;

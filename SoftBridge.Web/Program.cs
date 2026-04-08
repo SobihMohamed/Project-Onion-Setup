@@ -1,9 +1,11 @@
 
-using Microsoft.AspNetCore.Identity;
 using E_commerce.Persistence.ProgramServices;
-using E_commerce.Web.Middleware;
 using E_commerce.Services.AutoMapper;
 using E_commerce.Web.Extensions;
+using E_commerce.Web.Middleware;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using SoftBridge.Persistence;
 namespace E_commerce.Web
 {
     public class Program
@@ -22,7 +24,12 @@ namespace E_commerce.Web
             builder.Services.InjectRateLimiting();
             // get from services layer
             builder.Services.InjectAutoMapperService();
-            
+
+            // add AppDbContext Service
+            builder.Services.AddDbContext<ProjectDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+            );
+
             // add identity core
             builder.Services.AddDataProtection();
             

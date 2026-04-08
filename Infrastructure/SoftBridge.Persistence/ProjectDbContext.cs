@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Persistence.Project_DbContext
+namespace SoftBridge.Persistence
 {
     public class ProjectDbContext(DbContextOptions<ProjectDbContext> options)
             : IdentityDbContext<ApplicationUser>(options)
