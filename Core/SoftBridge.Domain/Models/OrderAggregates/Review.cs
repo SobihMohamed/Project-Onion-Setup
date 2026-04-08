@@ -13,6 +13,6 @@ namespace SoftBridge.Domain.Models.OrderAggregates
         public string? Comment { get; set; } = string.Empty;
         public virtual ServiceRequest ServiceRequest { get; set; } = null!;
         public virtual Client Client { get; set; } = null!;
-        public virtual ServiceProvider Provider { get; set; } = null!;
+        public virtual SProvider Provider { get; set; } = null!;
     }
 }

@@ -13,7 +13,7 @@ namespace E_commerce.Domain.Models.User
         public DateTime LastLoginAt { get; set; } = DateTime.UtcNow;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public virtual Client? ClientProfile { get; set; }
-        public virtual ServiceProvider? ProviderProfile { get; set; }
+        public virtual SProvider? ProviderProfile { get; set; }
         public virtual ICollection<Message> SentMessages { get; set; } = new HashSet<Message>();
         public virtual ICollection<Message> ReceivedMessages { get; set; } = new HashSet<Message>();
         public virtual ICollection<Notification> Notifications { get; set; } = new HashSet<Notification>();

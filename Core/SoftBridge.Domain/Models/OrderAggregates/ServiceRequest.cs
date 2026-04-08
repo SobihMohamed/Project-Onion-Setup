@@ -21,7 +21,7 @@ namespace SoftBridge.Domain.Models.OrderAggregates
         public DateTime? CompletedAt { get; set; }
         public virtual Service Service { get; set; } = null!;
         public virtual Client Client { get; set; } = null!;
-        public virtual ServiceProvider Provider { get; set; } = null!;
+        public virtual SProvider Provider { get; set; } = null!;
         public virtual Review? Review { get; set; }
         public virtual ICollection<Message> Messages { get; set; } = new HashSet<Message>();
 

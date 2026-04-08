@@ -12,7 +12,7 @@ using System.Text;
 namespace SoftBridge.Domain.Models.AccountAggregates
 {
     //+ ICollection < Review > Reviews
-    public class ServiceProvider: BaseEntity<Guid>
+    public class SProvider: BaseEntity<Guid>
     {
         public Guid UserId { get; set; }
         public string? Bio { get; set; } = string.Empty;
