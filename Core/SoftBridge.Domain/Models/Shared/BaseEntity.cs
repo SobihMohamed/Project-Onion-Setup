@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Domain.Models
+namespace E_commerce.Domain.Models.Shared
 {
     public class BaseEntity<TKey> : IEntity<TKey>
     {

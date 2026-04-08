@@ -1,0 +1,17 @@
+using System;
+using E_commerce.Domain.Models.Shared;
+using E_commerce.Domain.Models.User;
+
+namespace SoftBridge.Domain.Models.Shared;
+
+public class Notification : BaseEntity<Guid>
+{
+    public Guid UserId { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Message { get; set; } = string.Empty;
+    public bool IsRead { get; set; } = false;
+    public Guid? ReferenceId { get; set; }
+
+    // Navigation property
+    public ApplicationUser User { get; set; } = null!;
+}

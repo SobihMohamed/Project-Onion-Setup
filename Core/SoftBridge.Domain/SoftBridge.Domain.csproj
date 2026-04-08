@@ -15,5 +15,6 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Exceptions\NotFoundModels\" />
+		<Folder Include="Models/ServiceAggregates/" />
 	</ItemGroup>
 </Project>

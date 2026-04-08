@@ -6,11 +6,6 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 	<ItemGroup>
-		<Compile Remove="Configurations\**" />
-		<EmbeddedResource Remove="Configurations\**" />
-		<None Remove="Configurations\**" />
-	</ItemGroup>
-	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.3">
@@ -20,5 +15,8 @@
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\Core\SoftBridge.Services\SoftBridge.Services.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Include="Configurations\NotificationConfigurations.cs" />
 	</ItemGroup>
 </Project>
