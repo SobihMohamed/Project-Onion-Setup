@@ -19,6 +19,12 @@ namespace E_commerce.Persistence.Project_DbContext
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProjectDbContext).Assembly);
 
             // Additional model configurations can be added here if needed
+            modelBuilder.Entity<IdentityRole>().ToTable("Roles");
+            modelBuilder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
+            modelBuilder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
+            modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins");
+            modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
+            modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
         }
     }
 }

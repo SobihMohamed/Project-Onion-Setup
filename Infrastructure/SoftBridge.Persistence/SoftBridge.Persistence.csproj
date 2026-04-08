@@ -19,6 +19,7 @@
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\..\Core\SoftBridge.Domain\SoftBridge.Domain.csproj" />
 		<ProjectReference Include="..\..\Core\SoftBridge.Services\SoftBridge.Services.csproj" />
 	</ItemGroup>
 </Project>
