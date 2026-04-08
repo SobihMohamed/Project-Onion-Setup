@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 
-namespace SoftBridge.Domain.Models.ServiceRequest
+namespace SoftBridge.Domain.Models
 {
     public class ServiceRequest: BaseEntity<Guid>
     {
@@ -19,11 +19,11 @@ namespace SoftBridge.Domain.Models.ServiceRequest
         public string? RejectionReason { get; set; }
         public DateTime? AcceptedAt { get; set; }
         public DateTime? CompletedAt { get; set; }
-        //public virtual Service Service { get; set; } = null!;
-        //public virtual Client Client { get; set; } = null!;
-        //public virtual Provider Provider { get; set; } = null!;
-        //public virtual Review? Review { get; set; }
-        //public virtual ICollection<Message> Messages { get; set; } = new HashSet<Message>();
+        public virtual Service Service { get; set; } = null!;
+        public virtual Client Client { get; set; } = null!;
+        public virtual Provider Provider { get; set; } = null!;
+        public virtual Review? Review { get; set; }
+        public virtual ICollection<Message> Messages { get; set; } = new HashSet<Message>();
 
     }
 }
