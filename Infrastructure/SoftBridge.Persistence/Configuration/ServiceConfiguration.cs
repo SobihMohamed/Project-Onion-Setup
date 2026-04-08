@@ -29,10 +29,6 @@ namespace SoftBridge.Persistence.Configuration
                 .WithMany(x => x.Services)
                 .HasForeignKey(x => x.ProviderId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-
-
-
         }
     }
 }
