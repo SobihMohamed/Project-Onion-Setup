@@ -72,7 +72,6 @@ namespace SoftBridge.Persistence.Configuration
 
             builder.ToTable("Services");
 
-
         }
     }
 }
