@@ -16,6 +16,9 @@ public class ServiceRequestConfiguration : IEntityTypeConfiguration<ServiceReque
         builder.Property(x => x.Message)
             .HasMaxLength(1000);
         
+        builder.Property(x=>x.AgreedPrice)
+            .HasColumnType("decimal(18,2)");
+
         builder.Property(x => x.RejectionReason)
             .HasMaxLength(500);
         

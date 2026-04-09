@@ -1,6 +1,6 @@
 ﻿using Azure;
-using E_commerce.Domain.Exceptions;
 using E_commerce.Shared.Common.Responses;
+using SoftBridge.Domain.Exceptions;
 using System;
 using System.Text.Json;
 
