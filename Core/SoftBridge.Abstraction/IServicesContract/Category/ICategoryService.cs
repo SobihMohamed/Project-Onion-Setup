@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using E_commerce.Shared.Common.Dto.Category;
 using E_commerce.Shared.Common.Pagination;
 using E_commerce.Shared.Common.Params.Category;
 
@@ -22,7 +23,7 @@ namespace SoftBridge.Abstraction.IServices.Category
         /// <param name="id">The ID of the category to retrieve.</param>
         /// <returns>The category DTO if found, otherwise null.</returns>
     
-        Task<CategoryDto> GetCategoryByIdAsync(Guid id);
+        Task<CategoryWithServicesDto> GetCategoryByIdAsync(Guid id);
 
 
         /// <summary>
