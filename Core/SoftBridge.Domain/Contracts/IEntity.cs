@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Domain.Contracts
+namespace SoftBridge.Domain.Contracts
 {
     public interface IEntity<TKey>
     {

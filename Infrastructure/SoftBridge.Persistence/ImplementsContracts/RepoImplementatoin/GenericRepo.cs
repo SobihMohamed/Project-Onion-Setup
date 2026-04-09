@@ -1,9 +1,10 @@
 ﻿using E_commerce.Domain.Contracts;
-using E_commerce.Domain.Contracts.GenericReposPattern;
-using E_commerce.Domain.Contracts.SpecificationPattern;
-using E_commerce.Persistence.Evaluator;
 using Microsoft.EntityFrameworkCore;
+using SoftBridge.Domain.Contracts;
+using SoftBridge.Domain.Contracts.GenericReposPattern;
+using SoftBridge.Domain.Contracts.SpecificationPattern;
 using SoftBridge.Persistence;
+using SoftBridge.Persistence.Evaluator;
 
 namespace E_commerce.Persistence.ImplementsContracts.RepoImplementatoin
 {

@@ -1,4 +1,5 @@
-﻿using E_commerce.Domain.Contracts.GenericReposPattern;
+﻿using SoftBridge.Domain.Contracts;
+using SoftBridge.Domain.Contracts.GenericReposPattern;
 
 
 namespace E_commerce.Domain.Contracts.UnitOfWorkPattern

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftBridge.Shared.Dto_s.Token;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,7 +11,7 @@ namespace SoftBridge.Abstraction.IServicesContract.Token
     // and it will be used in the middleware to validate the tokens in the incoming requests.
     public interface ITokenService
     {
-        //Task<TokenResponseDto> CreateTokenAsync(TokenRequestDto tokenRequest);
+        Task<TokenResponseDto> CreateTokenAsync(TokenRequestDto tokenRequest);
 
     }
 }
