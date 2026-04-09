@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.Extensions.DependencyInjection;
+using SoftBridge.Services.AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,6 +14,7 @@ namespace E_commerce.Services.AutoMapper
             services.AddAutoMapper(cfg =>
             {
                 //cfg.AddProfile(new [Auth]Profile());
+                //cfg.AddProfile(new typeof(ClientProfile));
             });
             return services;
         }
