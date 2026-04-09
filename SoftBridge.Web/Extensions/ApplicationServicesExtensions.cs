@@ -1,5 +1,8 @@
 ﻿
 
+using SoftBridge.Abstraction.IServices.Attachement;
+using SoftBridge.Services.Services;
+
 namespace E_commerce.Web.Extensions
 {
     public static class ApplicationServicesExtensions
@@ -11,7 +14,7 @@ namespace E_commerce.Web.Extensions
 
             //3.Services
             //services.AddScoped<I[Name]Service, [Name]Service>();
-
+            services.AddScoped<IAttachmentService, AttachmentService>();
 
             return services;
         }
