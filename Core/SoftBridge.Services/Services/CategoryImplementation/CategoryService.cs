@@ -9,6 +9,7 @@ using SoftBridge.Shared.Common.Pagination;
 using SoftBridge.Shared.Common.Params.Category;
 using SoftBridge.Services.Specification.CategorySpecifications.GetAllCategoriesAsync;
 using SoftBridge.Services.Specification.CategorySpecifications.GetCategoryByIdAsync;
+using SoftBridge.Domain.Exceptions.NotFoundModels;
 
 namespace SoftBridge.Services.Services.CategoryImplementation;
 
@@ -33,7 +34,7 @@ public class CategoryService : ICategoryService
         var countSpec = new CategoryCountSpecification(parameters);
         var totalItems = await categoryRepo.GetCountAsync(countSpec);
 
-        return new PaginationResponse<CategoryDto>(parameters.PageIndex, parameters.PageSize, totalItems, _mapper.Map<IReadOnlyList<Category>, IReadOnlyList<CategoryDto>>(categories));
+        return new PaginationResponse<CategoryDto>(parameters.PageIndex, parameters.PageSize, totalItems, _mapper.Map<IReadOnlyList<CategoryDto>>(categories));
     }
 
     public async Task<CategoryWithServicesDto> GetCategoryByIdAsync(Guid id)
@@ -44,7 +45,7 @@ public class CategoryService : ICategoryService
         var category = await categoryRepo.GetByIdWithSpecAsync(spec);
 
         if (category is null)
-            throw new NotFoundExceptionCustome("Category not found");
+            throw new CategoryNotFoundException("Category not found");
 
         return _mapper.Map<Category, CategoryWithServicesDto>(category);
     }
@@ -59,7 +60,10 @@ public class CategoryService : ICategoryService
 
         await categoryRepo.AddAsync(category);
 
-        await _unitOfWork.SaveChangesAsync();
+        var result = await _unitOfWork.SaveChangesAsync();
+
+        if (result <= 0)
+            throw new BadRequestExceptionCustome("Failed to create category");
 
         return _mapper.Map<Category, CategoryDto>(category);
     }
@@ -72,9 +76,12 @@ public class CategoryService : ICategoryService
         var category = await categoryRepo.GetByIdAsync(id);
 
         if (category is null)
-            throw new NotFoundExceptionCustome("Category not found");
+            throw new CategoryNotFoundException("Category not found");
 
-        _mapper.Map<CategoryToUpdateDto, Category>(categoryToUpdateDto, category);
+        //map manually
+        category.Name = categoryToUpdateDto.Name;
+        category.IconUrl = categoryToUpdateDto.IconUrl;
+        category.IsActive = categoryToUpdateDto.IsActive;
 
         categoryRepo.Update(category);
         await _unitOfWork.SaveChangesAsync();
@@ -90,7 +97,7 @@ public class CategoryService : ICategoryService
         var category = await categoryRepo.GetByIdWithSpecAsync(spec);
 
         if (category is null)
-            throw new NotFoundExceptionCustome("Category not found");
+            throw new CategoryNotFoundException("Category not found");
 
         if (category.Services.Any())
             throw new BadRequestExceptionCustome("Cannot delete category with existing services. Reassign or delete them first.");    
