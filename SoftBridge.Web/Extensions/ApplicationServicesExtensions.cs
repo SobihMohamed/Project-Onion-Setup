@@ -1,7 +1,9 @@
 ﻿
 
 using SoftBridge.Abstraction.IServices.Attachement;
+using SoftBridge.Abstraction.IServices.Auth;
 using SoftBridge.Services.Services;
+using SoftBridge.Services.Services.AuthImplementation;
 
 namespace E_commerce.Web.Extensions
 {
@@ -15,6 +17,7 @@ namespace E_commerce.Web.Extensions
             //3.Services
             //services.AddScoped<I[Name]Service, [Name]Service>();
             services.AddScoped<IAttachmentService, AttachmentService>();
+            services.AddScoped<IAuthService, AuthService>();
 
             return services;
         }
