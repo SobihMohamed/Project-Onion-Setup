@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Shared.Common.Dto.Client
+namespace SoftBridge.Shared.Common.Dto.Client
 {
     public class ClientProfileDto
     {

@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
-using E_commerce.Domain.Contracts.UnitOfWorkPattern;
-using E_commerce.Domain.Exceptions;
-using E_commerce.Shared.Common.Dto.Client;
-using E_commerce.Shared.Common.Dto.Review;
-using E_commerce.Shared.Common.Dto.ServiceRequest;
+using SoftBridge.Shared.Common.Dto.Client;
 using SoftBridge.Abstraction.IServices.Profiles;
 using SoftBridge.Domain.Contracts.SpecificationPattern.ClientSpec;
 using SoftBridge.Domain.Contracts.SpecificationPattern.ServiceRequestSpec;
+using SoftBridge.Domain.Exceptions;
 using SoftBridge.Domain.Models.AccountAggregates;
 using SoftBridge.Domain.Models.EnumHelper;
 using SoftBridge.Domain.Models.OrderAggregates;
@@ -14,6 +11,9 @@ using SoftBridge.Domain.Models.ServiceAggregates;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SoftBridge.Domain.Contracts.UnitOfWorkPattern;
+using SoftBridge.Shared.Common.Dto.ServiceRequest;
+using SoftBridge.Shared.Common.Dto.Review;
 
 namespace SoftBridge.Services.Services.ClientImplementation
 {

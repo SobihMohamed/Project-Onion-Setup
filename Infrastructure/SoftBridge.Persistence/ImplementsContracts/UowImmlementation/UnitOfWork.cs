@@ -1,9 +1,9 @@
-﻿using E_commerce.Domain.Contracts.UnitOfWorkPattern;
-using E_commerce.Persistence.ImplementsContracts.RepoImplementatoin;
+﻿using SoftBridge.Persistence.ImplementsContracts.RepoImplementatoin;
 using SoftBridge.Domain.Contracts.GenericReposPattern;
+using SoftBridge.Domain.Contracts.UnitOfWorkPattern;
 using SoftBridge.Persistence;
 
-namespace E_commerce.Persistence.ImplementsContracts.UowImmlementation
+namespace SoftBridge.Persistence.ImplementsContracts.UowImmlementation
 {
     public class UnitOfWork(ProjectDbContext _context) : IUnitOfWork
     {
