@@ -1,9 +1,9 @@
-﻿using E_commerce.Domain.Contracts.UnitOfWorkPattern;
-using E_commerce.Persistence.ImplementsContracts.RepoImplementatoin;
+﻿using SoftBridge.Persistence.ImplementsContracts.RepoImplementatoin;
 using SoftBridge.Domain.Contracts.GenericReposPattern;
+using SoftBridge.Domain.Contracts.UnitOfWorkPattern;
 using SoftBridge.Persistence;
 
-namespace E_commerce.Persistence.ImplementsContracts.UowImmlementation
+namespace SoftBridge.Persistence.ImplementsContracts.UowImmlementation
 {
     public class UnitOfWork(ProjectDbContext _context) : IUnitOfWork
     {
@@ -11,9 +11,12 @@ namespace E_commerce.Persistence.ImplementsContracts.UowImmlementation
         IGenericRepo<TEntity, TKey> IUnitOfWork.GetRepository<TEntity, TKey>()
         {
             var type = typeof(TEntity).Name;
+
             if (_repositories.ContainsKey(type))
                 return (IGenericRepo<TEntity, TKey>)_repositories[type]; // cast the object to the correct type before returning it
+
             var repositoryInstance = new GenericRepo<TEntity, TKey>(_context); // create a new instance of the repository
+            
             _repositories[type] = repositoryInstance; // store the repository instance in the dictionary for future use
             return repositoryInstance; // return the newly created repository instance
 

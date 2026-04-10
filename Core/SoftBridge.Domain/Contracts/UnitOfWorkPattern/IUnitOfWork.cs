@@ -2,7 +2,7 @@
 using SoftBridge.Domain.Contracts.GenericReposPattern;
 
 
-namespace E_commerce.Domain.Contracts.UnitOfWorkPattern
+namespace SoftBridge.Domain.Contracts.UnitOfWorkPattern
 {
     // The IUnitOfWork interface defines a contract for a unit of work pattern,
     // which is a design pattern used to manage database transactions used when
