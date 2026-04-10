@@ -12,10 +12,11 @@ namespace SoftBridge.Domain.Contracts.SpecificationPattern.ServiceRequestSpec
         public ClientRequestByIdSpec(Guid requestId, Guid clientId)
             : base(x => x.Id == requestId && x.ClientId == clientId && !x.IsDeleted)
         {
-            AddInclude(r => r.Service);
-            AddInclude(r => r.Provider);
-            AddInclude(r => r.Provider.User);
-            AddInclude("Review");
+            AddInclude(c => c.Service);
+            AddInclude(c => c.Provider);
+            AddInclude(c => c.Provider.User);
+            AddInclude(c => c.Review);
+            //AddInclude("Review");
         }
     }
 }

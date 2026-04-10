@@ -17,7 +17,8 @@ namespace SoftBridge.Domain.Contracts.SpecificationPattern.ServiceRequestSpec
             AddInclude(r => r.Provider.User);
 
             // nested include: ServiceRequest → Review (one-to-one)
-            AddInclude("Review");
+            AddInclude(r => r.Review);
+            //AddInclude("Review");
 
             AddOrderBy(r => r.CreatedAt, true);
 
