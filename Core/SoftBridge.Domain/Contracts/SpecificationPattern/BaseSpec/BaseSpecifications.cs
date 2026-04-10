@@ -79,6 +79,8 @@ namespace E_commerce.Domain.Contracts.Specifications.BaseSpec
 
         #region Apply Nested Includes
         public List<string> IncludeStrings { get; private set; } = new List<string>();
+        protected void AddInclude(string includeString)
+            => IncludeStrings.Add(includeString);
 
         #endregion
         #region Apply OrderBy
