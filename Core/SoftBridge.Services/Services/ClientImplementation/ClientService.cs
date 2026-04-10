@@ -8,12 +8,11 @@ using SoftBridge.Domain.Models.AccountAggregates;
 using SoftBridge.Domain.Models.EnumHelper;
 using SoftBridge.Domain.Models.OrderAggregates;
 using SoftBridge.Domain.Models.ServiceAggregates;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using SoftBridge.Domain.Exceptions;
 using SoftBridge.Domain.Contracts.UnitOfWorkPattern;
 using SoftBridge.Shared.Common.Dto.ServiceRequest;
 using SoftBridge.Shared.Common.Dto.Review;
+
 
 namespace SoftBridge.Services.Services.ClientImplementation
 {

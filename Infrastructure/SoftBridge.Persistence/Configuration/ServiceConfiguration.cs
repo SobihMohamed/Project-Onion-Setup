@@ -69,7 +69,6 @@ namespace SoftBridge.Persistence.Configuration
                .HasForeignKey(r => r.ServiceId)
                .OnDelete(DeleteBehavior.Restrict);
 
-
             builder.ToTable("Services");
 
         }
