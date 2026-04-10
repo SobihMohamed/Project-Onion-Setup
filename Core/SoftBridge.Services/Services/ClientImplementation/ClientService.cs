@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using E_commerce.Domain.Contracts.UnitOfWorkPattern;
-using E_commerce.Domain.Exceptions;
 using E_commerce.Shared.Common.Dto.Client;
 using E_commerce.Shared.Common.Dto.Review;
 using E_commerce.Shared.Common.Dto.ServiceRequest;
@@ -11,9 +10,8 @@ using SoftBridge.Domain.Models.AccountAggregates;
 using SoftBridge.Domain.Models.EnumHelper;
 using SoftBridge.Domain.Models.OrderAggregates;
 using SoftBridge.Domain.Models.ServiceAggregates;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using SoftBridge.Domain.Exceptions;
+
 
 namespace SoftBridge.Services.Services.ClientImplementation
 {

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using E_commerce.Shared.Common.Dto.Category;
+using E_commerce.Shared.Common.Pagination;
+using E_commerce.Shared.Common.Params.Category;
 
 namespace SoftBridge.Abstraction.IServices.Category
 {
@@ -8,11 +11,46 @@ namespace SoftBridge.Abstraction.IServices.Category
     // and the clients will search for providers based on these categories
     public interface ICategoryService
     {
-        //Task<IReadOnlyList<CategoryDto>> GetAllCategoriesAsync();
-        //Task<CategoryDto> GetCategoryByIdAsync(int id);
+        /// <summary>
+        /// Gets all categories.
+        /// </summary>
+        /// <returns></returns>
+        Task<PaginationResponse<CategoryDto>> GetAllCategoriesAsync(CategoryQueryParams parameters);
 
-        //Task<CategoryDto> CreateCategoryAsync(CategoryToCreateDto categoryDto);
-        //Task<CategoryDto> UpdateCategoryAsync(int id, CategoryToUpdateDto categoryDto);
-        //Task<bool> DeleteCategoryAsync(int id);
+        /// <summary>
+        /// Gets a category by its ID.
+        /// </summary>
+        /// <param name="id">The ID of the category to retrieve.</param>
+        /// <returns>The category DTO if found, otherwise null.</returns>
+    
+        Task<CategoryWithServicesDto> GetCategoryByIdAsync(Guid id);
+
+
+        /// <summary>
+        /// Creates a new category.
+        /// </summary>
+        /// <param name="categoryDto">The category DTO to create.</param>
+        /// <returns>The created category DTO.</returns>
+        
+         Task<CategoryDto> CreateCategoryAsync(CategoryToCreateDto categoryDto);
+
+         
+        /// <summary>
+        /// Updates an existing category.
+        /// </summary>
+        /// <param name="id">The ID of the category to update.</param>
+        /// <param name="categoryDto">The category DTO with updated information.</param>
+        /// <returns>The updated category DTO.</returns>
+        
+        Task<CategoryDto> UpdateCategoryAsync(Guid id, CategoryToUpdateDto categoryDto);
+
+
+        /// <summary>
+        /// Deletes a category by its ID.
+        /// </summary>
+        /// <param name="id">The ID of the category to delete.</param>
+        /// <returns>A boolean indicating whether the deletion was successful.</returns>
+        
+        Task<bool> DeleteCategoryAsync(Guid id);
     }
 }
