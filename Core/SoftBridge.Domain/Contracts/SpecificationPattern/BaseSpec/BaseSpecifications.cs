@@ -79,6 +79,10 @@ namespace E_commerce.Domain.Contracts.Specifications.BaseSpec
         #region Apply Nested Includes
         public List<string> IncludeStrings { get; private set; } = new List<string>();
 
+        // this method is used to add include strings to the specifications classes
+        protected void AddInclude(string includeString)
+            => IncludeStrings.Add(includeString);
+
         #endregion
         #region Apply OrderBy
         // OrderExpressionInfo is the order by clause in the specifications to order the results

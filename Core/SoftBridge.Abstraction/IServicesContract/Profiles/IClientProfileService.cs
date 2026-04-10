@@ -1,4 +1,7 @@
-﻿using System;
+﻿using E_commerce.Shared.Common.Dto.Client;
+using E_commerce.Shared.Common.Dto.Review;
+using E_commerce.Shared.Common.Dto.ServiceRequest;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +10,14 @@ namespace SoftBridge.Abstraction.IServices.Profiles
     // This interface handles the Client's personal profile information.
     public interface IClientProfileService
     {
-        //Task<ClientProfileDto> GetProfileAsync(Guid clientId);
-        //Task<ClientProfileDto> UpdateProfileAsync(Guid clientId, UpdateClientProfileDto updateDto);
+
+        Task<ClientProfileDto> GetMyProfileAsync(string userId);
+        Task<ClientProfileDto> GetByIdAsync(Guid clientId);
+        Task<ClientProfileDto> UpdateProfileAsync(string userId, UpdateClientProfileDto updateDto);
+        Task DeleteAccountAsync(string userId);
+
+        Task<IReadOnlyList<ServiceRequestDto>> GetMyRequestsAsync(Guid clientId);
+        Task<ServiceRequestDto> GetRequestByIdAsync(Guid requestId, Guid clientId);
+        Task<ReviewDto> AddReviewAsync(Guid clientId, AddReviewDto dto);
     }
 }

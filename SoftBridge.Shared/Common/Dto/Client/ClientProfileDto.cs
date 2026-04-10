@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace E_commerce.Shared.Common.Dto.Client
+{
+    public class ClientProfileDto
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; } = string.Empty;
+        public string? ProfileImageUrl { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+}

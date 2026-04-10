@@ -1,7 +1,5 @@
-﻿using Azure;
-using E_commerce.Domain.Exceptions;
-using E_commerce.Shared.Common.Responses;
-using System;
+﻿using E_commerce.Shared.Common.Responses;
+using SoftBridge.Domain.Exceptions;
 using System.Text.Json;
 
 namespace E_commerce.Web.Middleware
