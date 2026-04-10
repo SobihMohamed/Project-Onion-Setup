@@ -1,7 +1,6 @@
-﻿using E_commerce.Domain.Models;
-using E_commerce.Domain.Models.Shared;
-using E_commerce.Domain.Models.User;
+﻿
 using SoftBridge.Domain.Models.OrderAggregates;
+using SoftBridge.Domain.Models.User;
 using System;
 using System.Collections.Generic;
 using System.Text;

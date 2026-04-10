@@ -1,9 +1,8 @@
-﻿using E_commerce.Domain.Models;
-using E_commerce.Domain.Models.Shared;
-using E_commerce.Domain.Models.User;
+﻿using SoftBridge.Domain.Models.Shared;
 using SoftBridge.Domain.Models.EnumHelper;
 using SoftBridge.Domain.Models.OrderAggregates;
 using SoftBridge.Domain.Models.ServiceAggregates;
+using SoftBridge.Domain.Models.User;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -23,7 +22,7 @@ namespace SoftBridge.Domain.Models.AccountAggregates
         public float AverageRating { get; set; } = 0f;
         public int TotalReviews { get; set; }
         public DateTime? ApprovedAt { get; set; }
-        public string ApproveByAdminId { get; set; }
+        public string? ApproveByAdminId { get; set; } // nullable for pending providers
         public virtual ApplicationUser User { get; set; } = null!;
         public virtual ApplicationUser? ApprovedByAdmin { get; set; }
         public virtual ICollection<Service> Services { get; set; } = new HashSet<Service>();

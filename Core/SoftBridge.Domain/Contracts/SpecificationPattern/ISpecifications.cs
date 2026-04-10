@@ -1,9 +1,10 @@
-﻿using System;
+﻿using SoftBridge.Domain.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace E_commerce.Domain.Contracts.SpecificationPattern
+namespace SoftBridge.Domain.Contracts.SpecificationPattern
 {
     // why where TEntity : IEntity<TKey> ,
     // because we want to make sure that the entity has a key and we can use it in the specifications

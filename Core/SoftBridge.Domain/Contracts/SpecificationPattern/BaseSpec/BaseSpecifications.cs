@@ -1,4 +1,5 @@
-﻿using E_commerce.Domain.Contracts.SpecificationPattern;
+﻿using SoftBridge.Domain.Contracts;
+using SoftBridge.Domain.Contracts.SpecificationPattern;
 using System.Linq.Expressions;
 
 namespace E_commerce.Domain.Contracts.Specifications.BaseSpec
