@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -9,7 +10,6 @@ namespace SoftBridge.Shared.Common.Dto.Client
     {
         public string FullName { get; set; } = string.Empty;
 
-        [Url]
-        public string? ProfileImageUrl { get; set; }
+        public IFormFile? ProfileImage { get; set; }
     }
 }

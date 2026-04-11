@@ -1,5 +1,5 @@
 using System;
-using E_commerce.Domain.Contracts.Specifications.BaseSpec;
+using SoftBridge.Domain.Contracts.Specifications.BaseSpec;
 using SoftBridge.Domain.Models.ServiceAggregates;
 
 namespace SoftBridge.Services.Specification.CategorySpecifications.GetCategoryByIdAsync;

@@ -15,6 +15,7 @@ using SoftBridge.Domain.Exceptions;
 using SoftBridge.Domain.Contracts.UnitOfWorkPattern;
 using SoftBridge.Shared.Common.Dto.ServiceRequest;
 using SoftBridge.Shared.Common.Dto.Review;
+using SoftBridge.Shared.Common.Dto.Attachement;
 
 
 namespace SoftBridge.Services.Services.ClientImplementation
@@ -64,24 +65,34 @@ namespace SoftBridge.Services.Services.ClientImplementation
             var client = await repo.GetByIdWithSpecAsync(spec);
 
             if (client is null)
-                throw new ClientNotFoundException(
-                    $"No client profile found for user.");
+                throw new ClientNotFoundException($"No client profile found for user.");
 
             client.User.FullName = updateDto.FullName;
 
-            if(updateDto.ProfileImageUrl != null)
+            // if there's a new profile image, handle the upload and update the URL
+            if (updateDto.ProfileImage != null)
             {
+                // 1. pass the old image URL to the attachment service to delete the old file if it exists
                 if (!string.IsNullOrEmpty(client.ProfileImageUrl))
                 {
-                    _attachmentService.DeleteFileAsync(updateDto.ProfileImageUrl);
+                    await _attachmentService.DeleteFileAsync(client.ProfileImageUrl);
                 }
-                // Generate a unique filename for the new profile image
+
+                // new folder structure: Users/{userId}/Profile/
                 var profilePicturePath = Path.Combine("Users", userId, "Profile");
 
-                //You fix this, Subhi, because I don't know.
-                //var imagePath = await _attachmentService.UploadFileAsync(updateDto.ProfileImageUrl, profilePicturePath);
+                // 2. prepare the upload DTO with the new file and target folder
+                var uploadDto = new UploadFileDto()
+                {
+                    File = updateDto.ProfileImage,
+                    FolderName = profilePicturePath
+                };
 
-                //client.ProfileImageUrl = imagePath;
+                // 3. upload new image and get the path
+                var imagePath = await _attachmentService.UploadFileAsync(uploadDto);
+
+                // 4 - update the client profile with the new image path 
+                client.ProfileImageUrl = imagePath;
             }
 
             repo.Update(client);
