@@ -16,6 +16,9 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Services/CategoryImplementation/" />
+		<Folder Include="Services/Chat/" />
+		<Folder Include="Specification/ChatSpecifications/" />
+		<Folder Include="Specification/ChatSpecifications/SaveMessageAsync/" />
 		<Folder Include="Specification\" />
 	</ItemGroup>
 </Project>
