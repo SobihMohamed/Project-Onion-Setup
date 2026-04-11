@@ -1,5 +1,5 @@
 using System;
-using E_commerce.Shared.Common.Params;
+using SoftBridge.Shared.Common.Params;
 
 namespace SoftBridge.Shared.Common.Params.Category;
 

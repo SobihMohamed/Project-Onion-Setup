@@ -1,5 +1,5 @@
 using System;
-using E_commerce.Domain.Contracts.Specifications.BaseSpec;
+using SoftBridge.Domain.Contracts.Specifications.BaseSpec;
 using SoftBridge.Shared.Common.Params.Category;
 using MailKit.Search;
 using SoftBridge.Domain.Models.ServiceAggregates;
