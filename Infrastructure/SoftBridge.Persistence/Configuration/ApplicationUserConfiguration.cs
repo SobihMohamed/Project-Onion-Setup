@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 using SoftBridge.Domain.Models.User;
+=======
+>>>>>>> 2d8a7662502cc08f2d4a72432349b54d9f85f25a
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SoftBridge.Domain.Models.AccountAggregates;
+using SoftBridge.Domain.Models.User;
 
 namespace SoftBridge.Persistence.Configuration;
 
@@ -14,6 +18,10 @@ public class ApplicationUserConfiguration : IEntityTypeConfiguration<Application
 
         builder.Property(x => x.IsActive)
             .HasDefaultValue(true);
+
+        builder.Property(x => x.UserType)
+            .HasConversion<string>()
+            .HasMaxLength(50);
 
         builder.Property(x => x.CreatedAt)
             .HasDefaultValueSql("GETUTCDATE()")

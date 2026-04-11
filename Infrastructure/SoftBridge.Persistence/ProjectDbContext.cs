@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 ﻿using SoftBridge.Domain.Models.User;
 using Microsoft.AspNetCore.Identity;
+=======
+﻿using Microsoft.AspNetCore.Identity;
+>>>>>>> 2d8a7662502cc08f2d4a72432349b54d9f85f25a
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SoftBridge.Domain.Models;
+using SoftBridge.Domain.Models.User;
 using System;
 using System.Collections.Generic;
 using System.Text;
