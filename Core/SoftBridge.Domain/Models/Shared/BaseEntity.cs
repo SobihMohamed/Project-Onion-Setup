@@ -1,9 +1,9 @@
-﻿using E_commerce.Domain.Contracts;
+﻿using SoftBridge.Domain.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Domain.Models.Shared
+namespace SoftBridge.Domain.Models.Shared
 {
     public class BaseEntity<TKey> : IEntity<TKey>
     {

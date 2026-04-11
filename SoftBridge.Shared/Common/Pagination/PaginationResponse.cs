@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Shared.Common.Pagination
+namespace SoftBridge.Shared.Common.Pagination
 {
     public class PaginationResponse<TData>
     {

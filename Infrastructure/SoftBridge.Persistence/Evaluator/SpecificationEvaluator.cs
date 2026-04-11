@@ -1,9 +1,9 @@
-﻿using E_commerce.Domain.Contracts;
-using E_commerce.Domain.Contracts.SpecificationPattern;
+﻿using SoftBridge.Domain.Contracts;
+using SoftBridge.Domain.Contracts.SpecificationPattern;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace E_commerce.Persistence.Evaluator
+namespace SoftBridge.Persistence.Evaluator
 {
     public static class SpecificationEvaluator
     {

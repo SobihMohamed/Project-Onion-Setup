@@ -1,11 +1,11 @@
-﻿using E_commerce.Domain.Contracts;
-using E_commerce.Domain.Contracts.GenericReposPattern;
-using E_commerce.Domain.Contracts.SpecificationPattern;
-using E_commerce.Persistence.Evaluator;
+﻿using SoftBridge.Domain.Contracts;
+using SoftBridge.Domain.Contracts.GenericReposPattern;
+using SoftBridge.Domain.Contracts.SpecificationPattern;
+using SoftBridge.Persistence.Evaluator;
 using Microsoft.EntityFrameworkCore;
 using SoftBridge.Persistence;
 
-namespace E_commerce.Persistence.ImplementsContracts.RepoImplementatoin
+namespace SoftBridge.Persistence.ImplementsContracts.RepoImplementatoin
 {
     public class GenericRepo<TEntity, TKey>
         : IGenericRepo<TEntity, TKey> where TEntity : class, IEntity<TKey>

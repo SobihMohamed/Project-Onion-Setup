@@ -1,12 +1,11 @@
-
-using E_commerce.Persistence.ProgramServices;
-using E_commerce.Services.AutoMapper;
-using E_commerce.Web.Extensions;
-using E_commerce.Web.Middleware;
+using SoftBridge.Persistence.ProgramServices;
+using SoftBridge.Services.AutoMapper;
+using SoftBridge.Web.Extensions;
+using SoftBridge.Web.Middleware;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SoftBridge.Persistence;
-namespace E_commerce.Web
+namespace SoftBridge.Web
 {
     public class Program
     {

@@ -1,9 +1,9 @@
-﻿using E_commerce.Domain.Contracts.SpecificationPattern;
+﻿using SoftBridge.Domain.Contracts.SpecificationPattern;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Domain.Contracts.GenericReposPattern
+namespace SoftBridge.Domain.Contracts.GenericReposPattern
 {
     // The IGenericRepo interface defines a contract for a generic repository pattern,
     // it used to be an abstracted common repository that can be used for any entity type,

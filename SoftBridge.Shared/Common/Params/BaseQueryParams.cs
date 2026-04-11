@@ -1,5 +1,5 @@
 ﻿
-namespace E_commerce.Shared.Common.Params
+namespace SoftBridge.Shared.Common.Params
 {
     public class BaseQueryParams
     {

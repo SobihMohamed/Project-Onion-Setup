@@ -1,10 +1,10 @@
-﻿using E_commerce.Domain.Contracts;
+﻿using SoftBridge.Domain.Contracts;
 
 using Microsoft.AspNetCore.Identity;
 using SoftBridge.Domain.Models.AccountAggregates;
 using SoftBridge.Domain.Models.Shared;
 
-namespace E_commerce.Domain.Models.User
+namespace SoftBridge.Domain.Models.User
 {
     public class ApplicationUser : IdentityUser, IEntity<string>
     {

@@ -1,9 +1,7 @@
-﻿
-
-using SoftBridge.Abstraction.IServices.Attachement;
+﻿using SoftBridge.Abstraction.IServices.Attachement;
 using SoftBridge.Services.Services;
 
-namespace E_commerce.Web.Extensions
+namespace SoftBridge.Web.Extensions
 {
     public static class ApplicationServicesExtensions
     {

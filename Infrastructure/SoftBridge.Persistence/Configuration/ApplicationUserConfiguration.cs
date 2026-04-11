@@ -1,4 +1,4 @@
-using E_commerce.Domain.Models.User;
+using SoftBridge.Domain.Models.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SoftBridge.Domain.Models.AccountAggregates;

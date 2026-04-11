@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Shared.Common.Params.Service
+namespace SoftBridge.Shared.Common.Params.Service
 {
     public class ServiceQueryParamsBaseQueryParams
     {

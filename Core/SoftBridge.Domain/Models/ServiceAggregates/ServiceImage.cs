@@ -1,4 +1,4 @@
-﻿using E_commerce.Domain.Models.Shared;
+﻿using SoftBridge.Domain.Models.Shared;
 
 
 namespace SoftBridge.Domain.Models.ServiceAggregates

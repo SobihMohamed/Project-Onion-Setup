@@ -1,5 +1,5 @@
 using System;
-using E_commerce.Domain.Models.Shared;
+using SoftBridge.Domain.Models.Shared;
 using SoftBridge.Domain.Models.AccountAggregates;
 using SoftBridge.Domain.Models.EnumHelper;
 using SoftBridge.Domain.Models.OrderAggregates;

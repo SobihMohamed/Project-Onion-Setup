@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace E_commerce.Domain.Contracts.SpecificationPattern
+namespace SoftBridge.Domain.Contracts.SpecificationPattern
 {
     // enable multi-level ordering in the specifications
     // like Orderby x => x.Name ascending and then by x => x.Price descending

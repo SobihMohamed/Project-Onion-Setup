@@ -1,4 +1,4 @@
-﻿namespace E_commerce.Shared.Common.Responses
+﻿namespace SoftBridge.Shared.Common.Responses
 {
     public class ApiResponse<TData>
     {

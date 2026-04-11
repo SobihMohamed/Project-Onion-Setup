@@ -1,6 +1,6 @@
-﻿using E_commerce.Shared.Common.Dto.Client;
-using E_commerce.Shared.Common.Dto.Review;
-using E_commerce.Shared.Common.Dto.ServiceRequest;
+﻿using SoftBridge.Shared.Common.Dto.Client;
+using SoftBridge.Shared.Common.Dto.Review;
+using SoftBridge.Shared.Common.Dto.ServiceRequest;
 using System;
 using System.Collections.Generic;
 using System.Text;

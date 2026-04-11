@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Services.Resolver
+namespace SoftBridge.Services.Resolver
 {
     // we make the class generic to be reusable for any source (Model) and destination types (Dto),
     // as long as the source member is a string (the image path) and

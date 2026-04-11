@@ -1,6 +1,6 @@
 using System;
-using E_commerce.Domain.Models.Shared;
-using E_commerce.Domain.Models.User;
+using SoftBridge.Domain.Models.Shared;
+using SoftBridge.Domain.Models.User;
 using SoftBridge.Domain.Models.OrderAggregates;
 
 namespace SoftBridge.Domain.Models.AccountAggregates;

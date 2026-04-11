@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Persistence.ProgramServices
+namespace SoftBridge.Persistence.ProgramServices
 {
     public static class AddDbServices
     {

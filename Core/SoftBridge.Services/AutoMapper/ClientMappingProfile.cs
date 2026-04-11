@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using E_commerce.Shared.Common.Dto.Client;
-using E_commerce.Shared.Common.Dto.ServiceRequest;
+using SoftBridge.Shared.Common.Dto.Client;
+using SoftBridge.Shared.Common.Dto.ServiceRequest;
 using SoftBridge.Domain.Models.AccountAggregates;
 using SoftBridge.Domain.Models.OrderAggregates;
 using System;

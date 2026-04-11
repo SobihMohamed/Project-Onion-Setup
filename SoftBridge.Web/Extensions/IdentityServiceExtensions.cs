@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
 
-namespace E_commerce.Web.Extensions
+namespace SoftBridge.Web.Extensions
 {
     public static class IdentityServiceExtensions
     {

@@ -1,5 +1,5 @@
 using System;
-using E_commerce.Domain.Contracts;
+using SoftBridge.Domain.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SoftBridge.Domain.Models.OrderAggregates;

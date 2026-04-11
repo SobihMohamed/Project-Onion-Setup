@@ -1,4 +1,4 @@
-﻿using E_commerce.Shared.Common.Dto.Attachement;
+﻿using SoftBridge.Shared.Common.Dto.Attachement;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
