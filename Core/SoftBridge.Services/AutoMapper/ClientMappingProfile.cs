@@ -6,6 +6,7 @@ using SoftBridge.Domain.Models.OrderAggregates;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SoftBridge.Services.Resolver;
 
 namespace SoftBridge.Services.AutoMapper
 {
@@ -18,18 +19,14 @@ namespace SoftBridge.Services.AutoMapper
                         opt => opt.MapFrom(src => src.User.FullName))
             .ForMember(dest => dest.Email,
                         opt => opt.MapFrom(src => src.User.Email))
+            .ForMember(dest => dest.ProfileImageUrl,
+               opt => opt.MapFrom<PictureUrlResolver<Client, ClientProfileDto>, string>(src => src.ProfileImageUrl))
             .ForMember(dest => dest.CreatedAt,
                            opt => opt.MapFrom(src => src.CreatedAt));
 
 
             CreateMap<UpdateClientProfileDto, Client>();
 
-            //CreateMap<ServiceRequest, ServiceRequestDto>()
-            //    .ForMember(dest => dest.ServiceName, opt => opt.MapFrom(src => src.Service.Title))
-            //    .ForMember(dest => dest.ProviderName, opt => opt.MapFrom(src => src.Service.Provider.User.FullName))
-            //    .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Service.Price))
-            //    .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.ToString()))
-            //    .ForMember(dest => dest.RequestedAt, opt => opt.MapFrom(src => src.CreatedAt));
         }
     }
 }

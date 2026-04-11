@@ -11,6 +11,7 @@ using SoftBridge.Domain.Models.EnumHelper;
 using SoftBridge.Domain.Models.OrderAggregates;
 using SoftBridge.Domain.Models.ServiceAggregates;
 using SoftBridge.Domain.Contracts.UnitOfWorkPattern;
+using SoftBridge.Abstraction.IServices.Attachement;
 
 namespace SoftBridge.Services.Services.ClientImplementation
 {
@@ -18,10 +19,12 @@ namespace SoftBridge.Services.Services.ClientImplementation
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public ClientService(IUnitOfWork unitOfWork, IMapper mapper)
+        private readonly IAttachmentService _attachmentService;
+        public ClientService(IUnitOfWork unitOfWork, IMapper mapper, IAttachmentService attachmentService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _attachmentService = attachmentService;
         }
 
         public async Task<ClientProfileDto> GetMyProfileAsync(string userId)
@@ -32,8 +35,8 @@ namespace SoftBridge.Services.Services.ClientImplementation
 
             if (client is null)
             {
-                throw new NotFoundExceptionCustome(
-                    $"No client profile found for user '{userId}'.");
+                throw new ClientNotFoundException(
+                    $"No client profile found for user.");
             }
             return _mapper.Map<ClientProfileDto>(client);
         }
@@ -45,7 +48,7 @@ namespace SoftBridge.Services.Services.ClientImplementation
             var client = await repo.GetByIdWithSpecAsync(clientSpec);
 
             if (client is null)
-                throw new NotFoundExceptionCustome(
+                throw new ClientNotFoundException(
                     $"Client with id '{clientId}' was not found.");
 
             return _mapper.Map<ClientProfileDto>(client);
@@ -57,13 +60,25 @@ namespace SoftBridge.Services.Services.ClientImplementation
             var client = await repo.GetByIdWithSpecAsync(spec);
 
             if (client is null)
-                throw new NotFoundExceptionCustome(
-                    $"No client profile found for user '{userId}'.");
+                throw new ClientNotFoundException(
+                    $"No client profile found for user.");
 
             client.User.FullName = updateDto.FullName;
 
             if(updateDto.ProfileImageUrl != null)
-                client.ProfileImageUrl = updateDto.ProfileImageUrl;
+            {
+                if (!string.IsNullOrEmpty(client.ProfileImageUrl))
+                {
+                    _attachmentService.DeleteFileAsync(updateDto.ProfileImageUrl);
+                }
+                // Generate a unique filename for the new profile image
+                var profilePicturePath = Path.Combine("Users", userId, "Profile");
+
+                //You fix this, Subhi, because I don't know.
+                //var imagePath = await _attachmentService.UploadFileAsync(updateDto.ProfileImageUrl, profilePicturePath);
+
+                //client.ProfileImageUrl = imagePath;
+            }
 
             repo.Update(client);
             await _unitOfWork.SaveChangesAsync();
@@ -78,8 +93,8 @@ namespace SoftBridge.Services.Services.ClientImplementation
             var client = await repo.GetByIdWithSpecAsync(spec);
 
             if (client is null)
-                throw new NotFoundExceptionCustome(
-                    $"No client profile found for user '{userId}'.");
+                throw new ClientNotFoundException(
+                    $"No client profile found for user.");
 
             client.User.IsActive = false;
 
@@ -104,7 +119,7 @@ namespace SoftBridge.Services.Services.ClientImplementation
             var request = await repo.GetByIdWithSpecAsync(spec);
 
             if (request is null)
-                throw new NotFoundExceptionCustome(
+                throw new ClientNotFoundException(
                     $"Request '{requestId}' was not found.");
 
             return _mapper.Map<ServiceRequestDto>(request);
@@ -115,7 +130,7 @@ namespace SoftBridge.Services.Services.ClientImplementation
         {
             // ── 1. validate rating range ─────────────────────────────────────────
             if (dto.Rating is < 1 or > 5)
-                throw new BadRequestExceptionCustome(
+                throw new ClientBadRequestException(
                     "Rating must be between 1 and 5.");
 
             // ── 2. load the request with its current review ──────────────────────
@@ -124,17 +139,17 @@ namespace SoftBridge.Services.Services.ClientImplementation
             var request = await requestRepo.GetByIdWithSpecAsync(spec);
 
             if (request is null)
-                throw new NotFoundExceptionCustome(
+                throw new ClientNotFoundException(
                     $"Request '{dto.RequestId}' was not found.");
 
             // ── 3. request must be completed before reviewing ────────────────────
             if (request.Status != RequestStatus.Completed)
-                throw new BadRequestExceptionCustome(
+                throw new ClientBadRequestException(
                     "You can only review a completed request.");
 
             // ── 4. prevent duplicate reviews ─────────────────────────────────────
             if (request.Review is not null)
-                throw new BadRequestExceptionCustome(
+                throw new ClientBadRequestException(
                     "You have already submitted a review for this request.");
 
             // ── 5. build the Review entity ───────────────────────────────────────

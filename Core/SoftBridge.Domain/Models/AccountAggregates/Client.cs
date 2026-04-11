@@ -2,6 +2,7 @@ using System;
 using SoftBridge.Domain.Models.Shared;
 using SoftBridge.Domain.Models.OrderAggregates;
 using SoftBridge.Domain.Models.User;
+using System.ComponentModel.DataAnnotations;
 
 namespace SoftBridge.Domain.Models.AccountAggregates;
 

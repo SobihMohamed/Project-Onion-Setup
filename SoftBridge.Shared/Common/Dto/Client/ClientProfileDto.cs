@@ -12,6 +12,8 @@ namespace SoftBridge.Shared.Common.Dto.Client
 
         [EmailAddress]
         public string Email { get; set; } = string.Empty;
+
+        [Url]
         public string? ProfileImageUrl { get; set; }
         public DateTime CreatedAt { get; set; }
     }
