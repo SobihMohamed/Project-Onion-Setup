@@ -1,17 +1,21 @@
-﻿using AutoMapper;
-using SoftBridge.Domain.Exceptions;
+using AutoMapper;
+
 using SoftBridge.Shared.Common.Dto.Client;
-using SoftBridge.Shared.Common.Dto.Review;
-using SoftBridge.Shared.Common.Dto.ServiceRequest;
 using SoftBridge.Abstraction.IServices.Profiles;
 using SoftBridge.Domain.Contracts.SpecificationPattern.ClientSpec;
 using SoftBridge.Domain.Contracts.SpecificationPattern.ServiceRequestSpec;
+using SoftBridge.Domain.Exceptions;
 using SoftBridge.Domain.Models.AccountAggregates;
 using SoftBridge.Domain.Models.EnumHelper;
 using SoftBridge.Domain.Models.OrderAggregates;
 using SoftBridge.Domain.Models.ServiceAggregates;
-using SoftBridge.Domain.Contracts.UnitOfWorkPattern;
 using SoftBridge.Abstraction.IServices.Attachement;
+
+using SoftBridge.Domain.Exceptions;
+using SoftBridge.Domain.Contracts.UnitOfWorkPattern;
+using SoftBridge.Shared.Common.Dto.ServiceRequest;
+using SoftBridge.Shared.Common.Dto.Review;
+
 
 namespace SoftBridge.Services.Services.ClientImplementation
 {

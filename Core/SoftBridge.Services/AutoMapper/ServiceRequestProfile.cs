@@ -1,10 +1,9 @@
-﻿using AutoMapper;
+using AutoMapper;
+
+using SoftBridge.Domain.Models.OrderAggregates;
 using SoftBridge.Shared.Common.Dto.Review;
 using SoftBridge.Shared.Common.Dto.ServiceRequest;
-using SoftBridge.Domain.Models.OrderAggregates;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace SoftBridge.Services.AutoMapper
 {
