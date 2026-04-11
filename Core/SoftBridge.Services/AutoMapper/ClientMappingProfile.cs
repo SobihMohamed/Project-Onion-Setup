@@ -22,17 +22,7 @@ namespace SoftBridge.Services.AutoMapper
                            opt => opt.MapFrom(src => src.CreatedAt));
 
 
-            CreateMap<UpdateClientProfileDto, Client>()
-                .ForMember(dest => dest.Id, opt => opt.Ignore())
-                .ForMember(dest => dest.UserId, opt => opt.Ignore())
-                .ForMember(dest => dest.User, opt => opt.Ignore())
-                .ForMember(dest => dest.ServiceRequests, opt => opt.Ignore())
-                .ForMember(dest => dest.Reviews, opt => opt.Ignore())
-                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())
-                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore())
-                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
-                .ForMember(dest => dest.LastModifiedBy, opt => opt.Ignore())
-                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+            CreateMap<UpdateClientProfileDto, Client>();
 
             //CreateMap<ServiceRequest, ServiceRequestDto>()
             //    .ForMember(dest => dest.ServiceName, opt => opt.MapFrom(src => src.Service.Title))
