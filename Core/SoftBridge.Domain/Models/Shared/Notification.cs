@@ -1,7 +1,6 @@
 using SoftBridge.Domain.Models.User;
 using System;
 
-
 namespace SoftBridge.Domain.Models.Shared;
 
 public class Notification : BaseEntity<Guid>

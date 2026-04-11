@@ -1,4 +1,4 @@
-﻿using E_commerce.Domain.Contracts.Specifications.BaseSpec;
+﻿using SoftBridge.Domain.Contracts.Specifications.BaseSpec;
 using SoftBridge.Domain.Models.OrderAggregates;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,8 @@ namespace SoftBridge.Domain.Contracts.SpecificationPattern.ServiceRequestSpec
             AddInclude(r => r.Service);
             AddInclude(r => r.Provider);
             AddInclude(r => r.Provider.User);
-            AddInclude("Review");   // check if review already exists
+            AddInclude(r => r.Review);
+            //AddInclude("Review");   // check if review already exists
         }
     }
 }

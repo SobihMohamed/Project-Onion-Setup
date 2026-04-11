@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Services.AutoMapper
+namespace SoftBridge.Services.AutoMapper
 {
     public static class AutoMapperService
     {

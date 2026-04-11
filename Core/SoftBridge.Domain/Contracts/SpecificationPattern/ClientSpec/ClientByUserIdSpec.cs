@@ -1,4 +1,4 @@
-﻿using E_commerce.Domain.Contracts.Specifications.BaseSpec;
+﻿using SoftBridge.Domain.Contracts.Specifications.BaseSpec;
 using SoftBridge.Domain.Models.AccountAggregates;
 using System;
 using System.Collections.Generic;

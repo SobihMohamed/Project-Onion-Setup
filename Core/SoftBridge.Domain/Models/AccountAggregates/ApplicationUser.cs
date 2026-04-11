@@ -1,4 +1,4 @@
-﻿using E_commerce.Domain.Contracts;
+﻿using SoftBridge.Domain.Contracts;
 
 using Microsoft.AspNetCore.Identity;
 using SoftBridge.Domain.Contracts;

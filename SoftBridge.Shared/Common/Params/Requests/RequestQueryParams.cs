@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Shared.Common.Params.Requests
+namespace SoftBridge.Shared.Common.Params.Requests
 {
     public class RequestQueryParams : BaseQueryParams
     {

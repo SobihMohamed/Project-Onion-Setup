@@ -1,4 +1,4 @@
-﻿
+
 using SoftBridge.Domain.Models.OrderAggregates;
 using SoftBridge.Domain.Models.User;
 using System;

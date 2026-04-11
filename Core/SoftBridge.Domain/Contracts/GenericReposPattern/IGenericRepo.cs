@@ -1,4 +1,4 @@
-﻿using SoftBridge.Domain.Contracts;
+using SoftBridge.Domain.Contracts;
 using SoftBridge.Domain.Contracts.SpecificationPattern;
 using System;
 using System.Collections.Generic;

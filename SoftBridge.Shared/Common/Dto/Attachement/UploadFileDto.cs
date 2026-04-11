@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace E_commerce.Shared.Common.Dto.Attachement
+namespace SoftBridge.Shared.Common.Dto.Attachement
 {
     public class UploadFileDto
     {

@@ -1,3 +1,4 @@
+
 ﻿using SoftBridge.Domain.Contracts;
 using SoftBridge.Domain.Contracts.GenericReposPattern;
 

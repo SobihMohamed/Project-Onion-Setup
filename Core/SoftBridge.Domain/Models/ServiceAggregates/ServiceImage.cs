@@ -1,4 +1,3 @@
-﻿
 
 using SoftBridge.Domain.Models.Shared;
 

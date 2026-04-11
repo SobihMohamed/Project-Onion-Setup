@@ -1,4 +1,4 @@
-﻿using SoftBridge.Domain.Models.Shared;
+using SoftBridge.Domain.Models.Shared;
 using SoftBridge.Domain.Models.EnumHelper;
 using SoftBridge.Domain.Models.OrderAggregates;
 using SoftBridge.Domain.Models.ServiceAggregates;
@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace SoftBridge.Domain.Models.AccountAggregates
 {

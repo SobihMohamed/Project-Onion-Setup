@@ -1,4 +1,4 @@
-﻿using E_commerce.Domain.Contracts.Specifications.BaseSpec;
+﻿using SoftBridge.Domain.Contracts.Specifications.BaseSpec;
 using SoftBridge.Domain.Models.OrderAggregates;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,8 @@ namespace SoftBridge.Domain.Contracts.SpecificationPattern.ServiceRequestSpec
             AddInclude(r => r.Provider.User);
 
             // nested include: ServiceRequest → Review (one-to-one)
-            AddInclude("Review");
+            AddInclude(r => r.Review);
+            //AddInclude("Review");
 
             AddOrderBy(r => r.CreatedAt, true);
 

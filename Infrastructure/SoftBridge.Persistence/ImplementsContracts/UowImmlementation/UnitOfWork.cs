@@ -1,4 +1,6 @@
-﻿using SoftBridge.Persistence.ImplementsContracts.RepoImplementatoin;
+
+using SoftBridge.Persistence.ImplementsContracts.RepoImplementatoin;
+
 using SoftBridge.Domain.Contracts.GenericReposPattern;
 using SoftBridge.Domain.Contracts.UnitOfWorkPattern;
 using SoftBridge.Persistence;

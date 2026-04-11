@@ -1,4 +1,4 @@
-﻿using E_commerce.Shared.Common.Params;
+﻿using SoftBridge.Shared.Common.Params;
 using System;
 using System.Collections.Generic;
 using System.Text;

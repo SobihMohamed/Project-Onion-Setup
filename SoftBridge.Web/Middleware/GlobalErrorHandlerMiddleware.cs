@@ -1,13 +1,12 @@
-﻿using E_commerce.Shared.Common.Responses;
+﻿using SoftBridge.Shared.Common.Responses;
 using SoftBridge.Domain.Exceptions;
 ﻿using Azure;
-using E_commerce.Shared.Common.Responses;
 using SoftBridge.Domain.Exceptions;
 using System;
 
 using System.Text.Json;
 
-namespace E_commerce.Web.Middleware
+namespace SoftBridge.Web.Middleware
 {
     public class GlobalErrorHandlerMiddleware
         // nextMw is the next middleware in the pipeline, logger is used for logging exceptions.

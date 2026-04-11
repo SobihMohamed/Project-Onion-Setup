@@ -1,7 +1,9 @@
-﻿using SoftBridge.Shared.Common.Dto.Client;
+using SoftBridge.Shared.Common.Dto.Client;
 using SoftBridge.Shared.Common.Dto.Review;
 using SoftBridge.Shared.Common.Dto.ServiceRequest;
-
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace SoftBridge.Abstraction.IServices.Profiles
 {

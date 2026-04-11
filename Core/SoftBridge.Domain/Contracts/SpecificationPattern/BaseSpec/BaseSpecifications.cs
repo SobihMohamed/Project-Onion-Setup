@@ -2,7 +2,7 @@
 using SoftBridge.Domain.Contracts.SpecificationPattern;
 using System.Linq.Expressions;
 
-namespace E_commerce.Domain.Contracts.Specifications.BaseSpec
+namespace SoftBridge.Domain.Contracts.Specifications.BaseSpec
 {
     // DRY Principle : this is the porpose of this class to avoid code duplication in the specifications classes
     // example : if we not create this class we will have to implement the ISpecifications interface in each specifications class and we will have to implement

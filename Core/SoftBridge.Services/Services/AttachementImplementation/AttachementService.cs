@@ -1,4 +1,4 @@
-﻿using E_commerce.Shared.Common.Dto.Attachement;
+﻿using SoftBridge.Shared.Common.Dto.Attachement;
 using Microsoft.AspNetCore.Hosting;
 using SoftBridge.Abstraction.IServices.Attachement;
 using SoftBridge.Domain.Exceptions;

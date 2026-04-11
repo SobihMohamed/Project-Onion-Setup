@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.RateLimiting;
 using SoftBridge.Domain.Models.User;
 using SoftBridge.Persistence;
 
-namespace E_commerce.Web.Extensions
+namespace SoftBridge.Web.Extensions
 {
     public static class IdentityServiceExtensions
     {

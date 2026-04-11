@@ -1,11 +1,11 @@
-﻿
+
 
 using SoftBridge.Abstraction.IServices.Attachement;
 using SoftBridge.Abstraction.IServices.Auth;
 using SoftBridge.Services.Services;
 using SoftBridge.Services.Services.AuthImplementation;
 
-namespace E_commerce.Web.Extensions
+namespace SoftBridge.Web.Extensions
 {
     public static class ApplicationServicesExtensions
     {
