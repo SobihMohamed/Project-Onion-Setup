@@ -1,11 +1,5 @@
-<<<<<<< HEAD
+
 ﻿using SoftBridge.Domain.Contracts;
-using SoftBridge.Domain.Contracts.GenericReposPattern;
-using SoftBridge.Domain.Contracts.SpecificationPattern;
-using SoftBridge.Persistence.Evaluator;
-=======
-﻿using E_commerce.Domain.Contracts;
->>>>>>> 2d8a7662502cc08f2d4a72432349b54d9f85f25a
 using Microsoft.EntityFrameworkCore;
 using SoftBridge.Domain.Contracts;
 using SoftBridge.Domain.Contracts.GenericReposPattern;
