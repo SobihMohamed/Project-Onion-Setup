@@ -1,4 +1,3 @@
-using System;
 using SoftBridge.Abstraction.IServicesContract.Chat;
 using SoftBridge.Domain.Contracts.UnitOfWorkPattern;
 using SoftBridge.Domain.Exceptions;
