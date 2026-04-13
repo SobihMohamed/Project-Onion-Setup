@@ -2,7 +2,7 @@ using System;
 using SoftBridge.Domain.Contracts.Specifications.BaseSpec;
 using SoftBridge.Domain.Models.OrderAggregates;
 
-namespace SoftBridge.Services.Specification.ChatSpecifications.SaveMessageAsync;
+namespace SoftBridge.Services.Specification.ChatSpecifications;
 
 public class ServiceRequestByIdSpecification : BaseSpecifications<ServiceRequest, Guid>
 {
